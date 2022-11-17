@@ -2,39 +2,56 @@ public class Main {
     public static void main(String[] args) {
         // Task 1
         System.out.println("Task 1");
-        int yearsOld = 24;
-        if (yearsOld >= 18) {
-            System.out.println("Поздравляем Вас с совершеннолетием!");
-        }else {
-            System.out.println("Возраст совершеннолетия еще не наступил, нужно еще не много подождать!");
+        int yearsOld = 6;
+        if (yearsOld >= 2 && yearsOld <=6) {
+            System.out.println("Если возраст человека равен "+yearsOld+" , то ему нужно ходить в детский сад ");
+        }else if (yearsOld > 6 && yearsOld <=18){
+            System.out.println("Если возраст человека равен "+yearsOld+" , то ему нужно ходить в школу ");
+        }else if (yearsOld > 18 && yearsOld <=24) {
+            System.out.println("Если возраст человека равен " + yearsOld + " , то ему нужно ходить в университет ");
+        }else if (yearsOld >24) {
+            System.out.println("Если возраст человека равен " + yearsOld + " , то ему нужно ходить на работу ");
         }
         // Task 2
         System.out.println("Task 2");
-        if (yearsOld >= 7 && yearsOld < 18) {
-            System.out.println("Ребенок ходит в школу");
-        }else if (yearsOld>=18 && yearsOld <24){
-            System.out.println("Человек ходит в университет");
-        }else if (yearsOld>=24){
-            System.out.println("Человек ходит на работу");
+        if (yearsOld < 5) {
+            System.out.println("Ребенок не может кататься на атракционе");
+        } else if (yearsOld < 14) {
+            System.out.println("Ребенок может кататься на атракционе только в сопровождением взрослого");
+        } else {
+            System.out.println("Ребенок может кататься на атракционе");
         }
+
         // Task 3
         System.out.println("Task 3");
-        int capacity = 102;
-        int seatCount =60;
-        int standingCount = capacity - seatCount;
-
-        int seatUsed = 59;
-        int standingUsed = 41;
-        if (seatUsed < seatCount){
-            System.out.println("Есть еще" + (seatCount - seatUsed) + " сидячих мест");
+        int one = 4;
+        int two = -5;
+        int three = 101;
+        if (one>two) {
+            if (one>three) {
+                System.out.println("Максимальное число - " + one);
+            } else if (three>one) {
+                System.out.println("Максимальное число - " + three);
+            }else {
+                System.out.println("Числа" +one+ " и " + three + "равны");
+            }
+        } else if (two>one) {
+            if (two>three) {
+                System.out.println("Максимальное число - " + two);
+            } else if (three>two) {
+                System.out.println("Максимальное число - " + three);
+            }else {
+                System.out.println("Числа" + two + " и " + three + "равны");
+            }
+            
         }else {
-            System.out.println("Сидячих мест нет");
-        }
-
-        if (standingUsed < standingCount){
-            System.out.println("Есть еще" + (seatCount - seatUsed) + " стоячих мест");
-        }else {
-            System.out.println("Стоячих мест нет");
+            if (one>three) {
+                System.out.println("Максимальное число -" + one);
+            }else if (three>one){
+                System.out.println("Максимальное число -" + three);
+            }else {
+                System.out.println("Все числа равны");
+            }
         }
 
     }
